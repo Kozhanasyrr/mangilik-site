@@ -162,6 +162,9 @@ section.block{padding-block:clamp(72px,10vw,128px);position:relative}
 .work .media{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--graphite-2)}
 .work .media img,.work .media video{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
 .work:hover .media img,.work:hover .media video{transform:scale(1.04)}
+.work .media.fit{background:#11161A}
+.work .media.fit video{object-fit:contain}
+.work:hover .media.fit video{transform:none}
 .work .info{padding:18px 20px 20px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
 .work h3{font-size:17px;font-weight:600}
 .work .cat{font-size:13px;color:var(--steel)}
@@ -390,7 +393,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justif
         <div class="info"><div><h3 data-i18n="w1h">Брендбук MANGILIK</h3><div class="cat" data-i18n="w1c">Айдентика · 24 страницы</div></div><span class="year">2026</span></div>
       </article>
       <article class="work big reveal" data-cat="motion">
-        <div class="media"><video src="assets/intro.mp4" poster="assets/intro-poster.jpg" muted loop playsinline preload="none" id="introVideo"></video>
+        <div class="media fit"><video src="assets/intro.mp4" poster="assets/intro-poster.jpg" muted loop playsinline preload="none" id="introVideo"></video>
           <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4l14 8-14 8z"/></svg></span></div>
         <div class="info"><div><h3 data-i18n="w2h">Анимация логотипа</h3><div class="cat" data-i18n="w2c">Моушн · интро для видео</div></div><span class="year">2026</span></div>
       </article>
