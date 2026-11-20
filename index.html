@@ -147,6 +147,12 @@ section.block{padding-block:clamp(72px,10vw,128px);position:relative}
 .svc .ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--graphite-2);border:1px solid var(--line)}
 .svc .ico svg{width:24px;height:24px;stroke:url(#gIco);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .svc h3{font-size:20px;font-weight:700}
+.svc.wide{grid-column:1/-1;grid-template-columns:auto 1fr auto;align-items:center;column-gap:28px;border-color:rgba(31,211,224,.3);background:linear-gradient(120deg,rgba(62,116,224,.16),rgba(31,211,224,.08) 55%,rgba(52,201,160,.12)),var(--graphite)}
+.svc.wide .txt{display:grid;gap:8px;min-width:0}
+.svc.wide .ico{width:64px;height:64px;border-radius:18px}
+.svc.wide .ico svg{width:30px;height:30px}
+.svc .new{display:inline-block;vertical-align:middle;margin-left:10px;font:700 10px var(--f-display);letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--grad);color:#0B0E12}
+@media (max-width:720px){.svc.wide{grid-template-columns:1fr;row-gap:14px}}
 .svc p{color:var(--kumis);font-size:15px}
 .svc ul{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
 .svc li{font-size:12px;color:var(--kumis);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
@@ -311,7 +317,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justif
       <div class="hero-meta" data-in style="--d:4">
         <span><b data-i18n="meta1b">Брендинг</b> · <span data-i18n="meta1">логотип и стиль</span></span>
         <span><b data-i18n="meta2b">Digital</b> · <span data-i18n="meta2">сайты и соцсети</span></span>
-        <span><b data-i18n="meta3b">Моушн</b> · <span data-i18n="meta3">анимация</span></span>
+        <span><b data-i18n="meta3b">Моушн</b> · <span data-i18n="meta3">анимация и ИИ-ролики</span></span>
       </div>
     </div>
     <div class="hero-mark" data-in style="--d:2" id="heroMark">
@@ -333,6 +339,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justif
       <p data-i18n="svc_p">Ведём бренд от первой идеи до вывески, сайта и постов в Instagram. Всё в одном стиле, без лишних подрядчиков.</p>
     </div>
     <div class="services">
+      <article class="svc wide reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2.5"/><path d="M16 10.5l5-3v9l-5-3"/><path d="M8 2.5v2M6.5 3.5h3"/><path d="M19.5 2v2.4M18.3 3.2h2.4"/></svg></div>
+        <div class="txt"><h3><span data-i18n="s7h">ИИ-ролики</span><span class="new" data-i18n="new">Новое</span></h3>
+        <p data-i18n="s7p">Рекламные и имиджевые видео, созданные с помощью нейросетей: от сценария до готового ролика для Reels, TikTok и сайта. Быстрее и дешевле съёмок.</p></div>
+        <ul><li data-i18n="s7a">Сценарий</li><li data-i18n="s7b">Генерация видео</li><li data-i18n="s7c">Озвучка и музыка</li></ul>
+      </article>
       <article class="svc reveal">
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M7 12c0-2.8 2.2-5 5-5s5 2.2 5 5-2.2 5-5 5"/><path d="M12 17c-2.8 0-5-2.2-5-5"/><circle cx="12" cy="12" r="1.5"/><path d="M3 12h2M19 12h2M12 3v2M12 19v2"/></svg></div>
         <h3 data-i18n="s1h">Логотип и айдентика</h3>
@@ -385,7 +397,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justif
       <button type="button" data-f="brand" aria-pressed="false" data-i18n="f_brand">Брендинг</button>
       <button type="button" data-f="web" aria-pressed="false" data-i18n="f_web">Сайты</button>
       <button type="button" data-f="motion" aria-pressed="false" data-i18n="f_motion">Моушн</button>
-      <button type="button" data-f="smm" aria-pressed="false" data-i18n="f_smm">Соцсети</button>
+      <button type="button" data-f="ai" aria-pressed="false" data-i18n="f_ai">ИИ-видео</button>
     </div>
     <div class="works">
       <article class="work big reveal" data-cat="brand">
@@ -405,9 +417,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justif
         <div class="media"><div class="ph"><svg class="patt" aria-hidden="true"><rect width="100%" height="100%" fill="url(#ornament)"/></svg><span class="ph-label" data-i18n="ph">Место для проекта</span></div><span class="badge" data-i18n="soon">Скоро</span></div>
         <div class="info"><div><h3 data-i18n="w4h">Сайт для бизнеса</h3><div class="cat" data-i18n="w4c">Сайты · лендинг</div></div><span class="year">—</span></div>
       </article>
-      <article class="work reveal" data-cat="smm">
+      <article class="work reveal" data-cat="ai">
         <div class="media"><div class="ph"><svg class="patt" aria-hidden="true"><rect width="100%" height="100%" fill="url(#ornament)"/></svg><span class="ph-label" data-i18n="ph">Место для проекта</span></div><span class="badge" data-i18n="soon">Скоро</span></div>
-        <div class="info"><div><h3 data-i18n="w5h">Оформление Instagram</h3><div class="cat" data-i18n="w5c">Соцсети · посты и сторис</div></div><span class="year">—</span></div>
+        <div class="info"><div><h3 data-i18n="w6h">Рекламный ИИ-ролик</h3><div class="cat" data-i18n="w6c">ИИ-видео · Reels и TikTok</div></div><span class="year">—</span></div>
       </article>
     </div>
   </div>
@@ -474,6 +486,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justif
             <option data-i18n="s2h">Брендбук</option>
             <option data-i18n="s3h">Сайты и лендинги</option>
             <option data-i18n="s4h">Дизайн для соцсетей</option>
+            <option data-i18n="s7h">ИИ-ролики</option>
             <option data-i18n="s5h">Моушн и анимация</option>
             <option data-i18n="s6h">Презентации и упаковка</option>
             <option data-i18n="f_other">Другое</option>
@@ -509,7 +522,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justif
     cta_short:"Жобаны талқылау",cta_long:"Жобаны талқылау",cta_works:"Жұмыстарды көру",
     hero_eyebrow:"Дизайн-студия · Қазақстан",hero_h1a:"Мәңгілік",hero_h1b:"брендтер",
     hero_lead:"Логотип, фирмалық стиль, сайт және әлеуметтік желілерге дизайн жасаймыз. Қазақ ою-өрнегі мен заманауи технологияны бір қолтаңбада біріктіреміз.",
-    meta1b:"Брендинг",meta1:"логотип пен стиль",meta2b:"Digital",meta2:"сайттар мен желілер",meta3b:"Моушн",meta3:"анимация",
+    meta1b:"Брендинг",meta1:"логотип пен стиль",meta2b:"Digital",meta2:"сайттар мен желілер",meta3b:"Моушн",meta3:"анимация және ЖИ-роликтер",
     svc_eyebrow:"Қызметтер",svc_h:"Не істейміз",svc_p:"Брендті алғашқы идеядан маңдайшаға, сайтқа және Instagram посттарына дейін жүргіземіз. Бәрі бір стильде, артық мердігерсіз.",
     s1h:"Логотип және айдентика",s1p:"Белгі, жазу бөлігі, түстер мен ережелер. Он жылдан кейін де танылатын логотип.",s1a:"Белгі",s1b:"Түстер мен қаріптер",s1c:"Паттерн",
     s2h:"Брендбук",s2p:"Визиткадан маңдайшаға дейінгі стиль нұсқаулығы: бренд барлық жерде бірдей көрінеді.",s2a:"Визитка мен бланк",s2b:"Мерч",s2c:"Маңдайша",
@@ -517,6 +530,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justif
     s4h:"Әлеуметтік желілерге дизайн",s4p:"Instagram мен TikTok үшін фирмалық стильдегі пост, сторис және мұқаба шаблондары.",s4a:"Посттар",s4b:"Сторис",s4c:"Хайлайтс",
     s5h:"Моушн және анимация",s5p:"Анимациялық логотиптер, видеоға интро және желілерге жарнамалық роликтер.",s5a:"Логотип интросы",s5b:"Reels",s5c:"Жарнама",
     s6h:"Презентация және қаптама",s6p:"Клиенттер мен инвесторларға презентация, буклет, қаптама және полиграфия.",s6a:"Презентациялар",s6b:"Қаптама",s6c:"Полиграфия",
+    s7h:"ЖИ-роликтер",new:"Жаңа",s7p:"Нейрожелілер арқылы жасалған жарнамалық және имидждік видеолар: сценарийден Reels, TikTok және сайтқа дайын роликке дейін. Түсірілімнен жылдам әрі арзан.",s7a:"Сценарий",s7b:"Видео генерациясы",s7c:"Дыбыстау мен музыка",f_ai:"ЖИ-видео",w6h:"Жарнамалық ЖИ-ролик",w6c:"ЖИ-видео · Reels пен TikTok",
     w_eyebrow:"Портфолио",w_h:"Біздің жұмыстар",w_p:"Өз брендімізден бастадық. Жақында мұнда клиенттердің жобалары пайда болады.",
     f_all:"Барлығы",f_brand:"Брендинг",f_web:"Сайттар",f_motion:"Моушн",f_smm:"Желілер",
     w1h:"MANGILIK брендбугі",w1c:"Айдентика · 24 бет",w2h:"Логотип анимациясы",w2c:"Моушн · видеоға интро",w3h:"MANGILIK мерчі",w3c:"Брендинг · тасымалдағыштар",
@@ -532,10 +546,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justif
     f_name:"Атыңыз",f_phone:"Телефон немесе WhatsApp",f_service:"Не істеу керек",f_other:"Басқа",f_msg:"Міндет туралы қысқаша",f_send:"Өтінім жіберу",
     f_ok:"Рақмет! Өтінім қабылданды, бір күн ішінде хабарласамыз.",e_name:"Атыңызды жазыңыз",e_phone:"Телефон нөмірін толық жазыңыз",
     foot:"© 2026 «Мәңгілік» ЖК. Design & Digital.",
-    ticker:["Логотип","Брендбук","Сайттар","Instagram","Моушн","Қаптама","Презентациялар","Айдентика"]
+    ticker:["ЖИ-роликтер","Логотип","Брендбук","Сайттар","Instagram","Моушн","Қаптама","Презентациялар","Айдентика"]
   };
   var RU={copied:"Скопировано",e_name:"Напишите, как к вам обращаться",e_phone:"Укажите номер полностью",
-    ticker:["Логотип","Брендбук","Сайты","Instagram","Моушн","Упаковка","Презентации","Айдентика"]};
+    ticker:["ИИ-ролики","Логотип","Брендбук","Сайты","Instagram","Моушн","Упаковка","Презентации","Айдентика"]};
   document.querySelectorAll('[data-i18n]').forEach(function(el){RU[el.dataset.i18n]=el.textContent});
   document.querySelectorAll('[data-i18n-html]').forEach(function(el){RU[el.dataset.i18nHtml]=el.innerHTML});
   var lang='ru';
